@@ -7,6 +7,9 @@ public class Main {
 		//Erik
 		System.out.println("Hello There.");
 		System.out.println("Test 1"); 
+		//Brendan
+		System.out.println("Hello There");
+		System.out.println("Test 2 ");
 	}
 
 }
