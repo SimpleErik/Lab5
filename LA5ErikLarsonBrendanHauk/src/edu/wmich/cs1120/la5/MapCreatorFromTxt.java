@@ -44,7 +44,7 @@ public class MapCreatorFromTxt implements IMapCreator {
 		
 	}
 	
-	}
+	
 
 	@Override
 	public TerrainScanner getScanner() {
