@@ -20,23 +20,28 @@ public class ElevationAnalyzer implements IRover {
 	@Override
 	public void analyzePath() {
 		// TODO Auto-generated method stub
-		int counter = 0;
+		double counter = 0;
+		double ans = 0;
+		analysis = "0.0";
+		double toDouble = Double.parseDouble(analysis);
 		for(int i = 0; i < getPath().size(); i++){
-			analysis += getPath().get(i).getElevation();
+			toDouble += getPath().get(i).getElevation();
 			counter++;
 		}
+		ans = toDouble / counter;
+		analysis = Double.toString(ans);
 	}
 
 	@Override
 	public String getAnalysis() {
 		// TODO Auto-generated method stub
-		return null;
+		return analysis;
 	}
 
 	@Override
 	public void setAnalysis(String analysis) {
 		// TODO Auto-generated method stub
-
+		this.analysis = analysis; 
 	}
 
 }

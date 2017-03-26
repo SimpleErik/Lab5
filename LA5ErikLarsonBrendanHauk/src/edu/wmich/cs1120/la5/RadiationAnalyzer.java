@@ -22,9 +22,12 @@ public class RadiationAnalyzer implements IRover {
 	@Override
 	public void analyzePath() {
 		// TODO Auto-generated method stub
+		analysis = "0";
+		double ans = Double.parseDouble(analysis);
 		for(int i = 0; i < getPath().size(); i++){
-			analysis += getPath().get(i).getRadiation();
+			ans += getPath().get(i).getRadiation();
 		}
+		analysis = Double.toString(ans);
 	}
 
 	@Override
