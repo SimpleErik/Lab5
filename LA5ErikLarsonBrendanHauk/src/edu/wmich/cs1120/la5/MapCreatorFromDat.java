@@ -9,7 +9,31 @@ public class MapCreatorFromDat implements IMapCreator {
 	@Override
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		// TODO Auto-generated method stub
+		String [] field = new String[3];
+		IArea [][] board = new IArea[10][10];
 		
+		try{
+			RandomAccessFile raf = new RandomAccessFile(fileName, "r");
+			int count = 0;
+			double elev;
+			double rad;
+			raf.seek(count);
+		while(raf.getFilePointer() < raf.length()){
+				raf.readDouble();
+				raf.seek(count+1);
+				raf.readDouble();
+				raf.seek(count+2);
+				raf.readDouble();
+				raf.seek(count+3);
+				raf.readChar();
+			 }
+		 
+        	
+		
+        }
+		catch(IOException e){
+        	e.printStackTrace();
+        }
 	}
 
 	@Override
