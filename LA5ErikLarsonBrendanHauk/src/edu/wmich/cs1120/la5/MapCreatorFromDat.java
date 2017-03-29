@@ -18,7 +18,7 @@ public class MapCreatorFromDat implements IMapCreator {
 			double elev;
 			double rad;
 			raf.seek(count);
-		while(raf.getFilePointer() < raf.length()){
+		while( ){
 				raf.readDouble();
 				raf.seek(count+1);
 				raf.readDouble();
