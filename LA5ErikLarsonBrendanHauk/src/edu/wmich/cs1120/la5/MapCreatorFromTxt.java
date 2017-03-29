@@ -9,6 +9,11 @@ public class MapCreatorFromTxt implements IMapCreator {
 	
 	private TerrainScanner tc = new TerrainScanner();
 
+	/**
+	 * this scans the txt file provided
+	 * @param String fileName
+	 * @param int threshold
+	 */
 	@Override
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		// TODO Auto-generated method stub
@@ -45,13 +50,17 @@ public class MapCreatorFromTxt implements IMapCreator {
 	}
 	
 	
-
+	/**
+	 * allows other classes to use the terrain scanner
+	 */
 	@Override
 	public TerrainScanner getScanner() {
 		// TODO Auto-generated method stub
 		return tc;
 	}
-
+	/**
+	 * sets the terrain scanner
+	 */
 	@Override
 	public void setScanner(TerrainScanner scanner) {
 		// TODO Auto-generated method stub
