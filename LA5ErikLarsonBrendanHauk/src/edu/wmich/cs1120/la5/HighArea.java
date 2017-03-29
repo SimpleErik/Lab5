@@ -5,42 +5,63 @@ public class HighArea extends Area {
 	private double elevation;
 	private double radiation;
 	
+	/**
+	 * Lets other classes be able to use the basicEnergyCost variable
+	 */
 	@Override
 	public double getBasicEnergyCost() {
 		// TODO Auto-generated method stub
 		return basicEnergyCost;
 	}
+	/**
+	 * This sets the variable basicEnergyCost
+	 * @param basicEnergyCost
+	 */
 
 	@Override
 	public void setBasicEnergyCost(double BasicEnergyCost) {
 		// TODO Auto-generated method stub
 		this.basicEnergyCost = BasicEnergyCost; 
 	}
-	
+	/**
+	 * Allows other classes to be able to use the elevation variable
+	 */
 	@Override
 	public double getElevation() {
 		// TODO Auto-generated method stub
 		return elevation;
 	}
-	
+	/**
+	 * Sets the variable elevation
+	 * @param double elevation
+	 */
 	@Override
 	public void setElevation(double elevation) {
 		// TODO Auto-generated method stub
 		this.elevation = elevation;
 	}
 	
+	/**
+	 * Lets other classes use the radiation variable 
+	 */
 	@Override
 	public double getRadiation() {
 		// TODO Auto-generated method stub
 		return radiation;
 	}
 	
+	/**
+	 * sets the radiation variable
+	 * @param double radiation
+	 */
 	@Override
 	public void setRadiation(double radiation) {
 		// TODO Auto-generated method stub
 		this.radiation = radiation;
 	}
-	
+	/**
+	 * finds out what the consumed energy
+	 */
 	@Override
 	public double calcConsumedEnergy(){
 		return getBasicEnergyCost() * 4;
