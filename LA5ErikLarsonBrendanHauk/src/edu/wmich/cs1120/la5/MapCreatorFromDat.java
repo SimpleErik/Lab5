@@ -42,7 +42,6 @@ public class MapCreatorFromDat implements IMapCreator {
 					op = raf.readChar();
 					var1 = raf.readInt();
 					var2 = raf.readInt();
-					IExpression be = new BinaryExpression(var1, var2, op);
 					IExpression num1 = new Literal(var1);
 					IExpression num2 = new Literal(var2);
 					
