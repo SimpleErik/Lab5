@@ -9,6 +9,7 @@ public class RadiationAnalyzer implements IRover {
 	
 	/**
 	 * allows other classes to use the path
+	 * @return path
 	 */
 	@Override
 	public ArrayList<IArea> getPath() {
@@ -18,7 +19,7 @@ public class RadiationAnalyzer implements IRover {
 
 	/**
 	 * sets the path
-	 * @param ArrayList<IArea> path
+	 * @param path
 	 */
 	@Override
 	public void setPath(ArrayList<IArea> path) {
@@ -42,6 +43,7 @@ public class RadiationAnalyzer implements IRover {
 
 	/**
 	 * allows other classes to use the analysis
+	 * @return analysis
 	 */
 	@Override
 	public String getAnalysis() {
@@ -51,7 +53,7 @@ public class RadiationAnalyzer implements IRover {
 
 	/**
 	 * sets the analyzer
-	 * @param String analysis
+	 * @param analysis
 	 */
 	@Override
 	public void setAnalysis(String analysis) {
