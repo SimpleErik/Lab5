@@ -6,6 +6,11 @@ import java.io.*;
 
 public class MapCreatorFromDat implements IMapCreator {
 	TerrainScanner tc = new TerrainScanner();
+	/**
+	 * scans the dat file provided
+	 * @param fileName
+	 * @param threshold
+	 */
 	@Override
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		// TODO Auto-generated method stub
@@ -70,12 +75,20 @@ public class MapCreatorFromDat implements IMapCreator {
 		getScanner().generateMap(threshold);
 	}
 
+	/**
+	 * allows other classes to get the scanner
+	 * @return tc
+	 */
 	@Override
 	public TerrainScanner getScanner() {
 		// TODO Auto-generated method stub
 		return tc;
 	}
 
+	/**
+	 * sets the terrain scanner
+	 * @param scanner
+	 */
 	@Override
 	public void setScanner(TerrainScanner scanner) {
 		// TODO Auto-generated method stub
