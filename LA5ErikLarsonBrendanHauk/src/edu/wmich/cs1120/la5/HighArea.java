@@ -7,6 +7,7 @@ public class HighArea extends Area {
 	
 	/**
 	 * Lets other classes be able to use the basicEnergyCost variable
+	 * @return basicEnergyCosy
 	 */
 	@Override
 	public double getBasicEnergyCost() {
@@ -25,6 +26,7 @@ public class HighArea extends Area {
 	}
 	/**
 	 * Allows other classes to be able to use the elevation variable
+	 * @return elevation
 	 */
 	@Override
 	public double getElevation() {
@@ -33,7 +35,7 @@ public class HighArea extends Area {
 	}
 	/**
 	 * Sets the variable elevation
-	 * @param double elevation
+	 * @param elevation
 	 */
 	@Override
 	public void setElevation(double elevation) {
@@ -43,6 +45,7 @@ public class HighArea extends Area {
 	
 	/**
 	 * Lets other classes use the radiation variable 
+	 * @return radiation
 	 */
 	@Override
 	public double getRadiation() {
@@ -52,7 +55,7 @@ public class HighArea extends Area {
 	
 	/**
 	 * sets the radiation variable
-	 * @param double radiation
+	 * @param radiation
 	 */
 	@Override
 	public void setRadiation(double radiation) {
@@ -60,7 +63,7 @@ public class HighArea extends Area {
 		this.radiation = radiation;
 	}
 	/**
-	 * finds out what the consumed energy
+	 * finds out what the consumed energy total is
 	 */
 	@Override
 	public double calcConsumedEnergy(){
