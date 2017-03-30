@@ -1,12 +1,13 @@
 package edu.wmich.cs1120.la5;
 
-public class LowArea extends Area {
+public class HighArea extends Area {
 	private double basicEnergyCost;
 	private double elevation;
 	private double radiation;
 	
 	/**
-	 * lets other classes to use the basicEnergyCost 
+	 * Lets other classes be able to use the basicEnergyCost variable
+	 * @return basicEnergyCosy
 	 */
 	@Override
 	public double getBasicEnergyCost() {
@@ -14,17 +15,18 @@ public class LowArea extends Area {
 		return basicEnergyCost;
 	}
 	/**
-	 * sets the basicEnergyCost variable
-	 * @param double BasicEnergyCost
+	 * This sets the variable basicEnergyCost
+	 * @param basicEnergyCost
 	 */
-	
+
 	@Override
 	public void setBasicEnergyCost(double BasicEnergyCost) {
 		// TODO Auto-generated method stub
 		this.basicEnergyCost = BasicEnergyCost; 
 	}
 	/**
-	 * lets other classes use the elevation variable
+	 * Allows other classes to be able to use the elevation variable
+	 * @return elevation
 	 */
 	@Override
 	public double getElevation() {
@@ -32,25 +34,28 @@ public class LowArea extends Area {
 		return elevation;
 	}
 	/**
-	 * sets the variable elevation
-	 * @param double elevation
+	 * Sets the variable elevation
+	 * @param elevation
 	 */
 	@Override
 	public void setElevation(double elevation) {
 		// TODO Auto-generated method stub
 		this.elevation = elevation;
 	}
+	
 	/**
-	 * allows other classes to use the variable radiation
+	 * Lets other classes use the radiation variable 
+	 * @return radiation
 	 */
 	@Override
 	public double getRadiation() {
 		// TODO Auto-generated method stub
 		return radiation;
 	}
+	
 	/**
 	 * sets the radiation variable
-	 * @param double radiation
+	 * @param radiation
 	 */
 	@Override
 	public void setRadiation(double radiation) {
@@ -58,7 +63,7 @@ public class LowArea extends Area {
 		this.radiation = radiation;
 	}
 	/**
-	 * finds the total of consumed energy
+	 * finds out what the consumed energy total is
 	 */
 	@Override
 	public double calcConsumedEnergy(){
