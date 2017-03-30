@@ -1,6 +1,6 @@
 package edu.wmich.cs1120.la5;
 
-public class HighArea extends Area {
+public class LowArea extends Area {
 	private double basicEnergyCost;
 	private double elevation;
 	private double radiation;
