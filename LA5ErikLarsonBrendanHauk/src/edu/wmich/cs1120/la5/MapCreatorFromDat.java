@@ -9,24 +9,20 @@ public class MapCreatorFromDat implements IMapCreator {
 	@Override
 	public void scanTerrain(String fileName, int threshold) throws IOException {
 		// TODO Auto-generated method stub
-		String [] field = new String[3];
 		IArea [][] board = new IArea[10][10];
-		int position = 0;
+		Integer position = 0;
 		double elev = 0;
 		double rad = 0; 
 		double engy = 0;
 		char op = ' ';
-		int var1 = 0;
-		int var2 = 0;
+		Integer var1 = 0;
+		Integer var2 = 0;
+		RandomAccessFile raf = new RandomAccessFile(fileName, "r");
 		try{
-			
-			RandomAccessFile raf = new RandomAccessFile(fileName, "rw");
-			for(int r = 0; r < board.length; r++){
-				for(int c = 0; c < board[r].length; c++){
-					if(position == -1){
-						break;
-					}
+					int j = 0;
+					int i = 0;
 					raf.seek(position);
+					while(position != -1){
 					engy = raf.readDouble();
 					elev = raf.readDouble();
 					rad = raf.readDouble();
@@ -35,19 +31,21 @@ public class MapCreatorFromDat implements IMapCreator {
 						low.setBasicEnergyCost(engy);
 						low.setElevation(elev);
 						low.setRadiation(rad);
-						board[r][c] = low;
+						board[i][j] = low;
 					}else{
 						Area high = new HighArea();
 						high.setBasicEnergyCost(engy);
 						high.setElevation(elev);
 						high.setRadiation(rad);
-						board[r][c] = high;
+						board[i][j] = high;
 					}
 					op = raf.readChar();
 					var1 = raf.readInt();
 					var2 = raf.readInt();
+					IExpression be = new BinaryExpression(var1, var2, op);
 					IExpression num1 = new Literal(var1);
 					IExpression num2 = new Literal(var2);
+					
 					if(op == '+'){
 						IOperation add = new Addition();
 						position = add.perform(num1, num2);
@@ -56,18 +54,18 @@ public class MapCreatorFromDat implements IMapCreator {
 						IOperation sub = new Subtraction();
 						position = sub.perform(num1, num2);
 					}
-				}
+					if(j == 9){
+						j = 0;
+						i++;
+					}else{
+					j++;
+					}
+					
 			}
-			
-		
-		 
-        	
-		
-        }
-		catch(IOException e){
+			}catch(IOException e){
         	e.printStackTrace();
         }
-		
+		raf.close();
 		getScanner().setTerrain(board);
 		getScanner().getTerrain();
 		getScanner().generateMap(threshold);
