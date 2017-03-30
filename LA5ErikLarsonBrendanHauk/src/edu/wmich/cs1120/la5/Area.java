@@ -8,6 +8,7 @@ public abstract class Area implements IArea {
 	
 	/**
 	 * allows classes to call basicEnergyCost
+	 * @return basicEnergyCost
 	 */
 	@Override
 	public double getBasicEnergyCost() {
@@ -16,7 +17,7 @@ public abstract class Area implements IArea {
 	}
 	/**
 	 * sets the basicEnergyCost
-	 * @param double basicEnergyCost
+	 * @param basicEnergyCost
 	 */
 	@Override
 	public void setBasicEnergyCost(double basicEnergyCost) {
@@ -26,6 +27,7 @@ public abstract class Area implements IArea {
 
 	/**
 	 * allows classes to use the elevation
+	 * @return elevation
 	 */
 	@Override
 	public double getElevation() {
@@ -35,7 +37,7 @@ public abstract class Area implements IArea {
 
 	/**
 	 * sets the elevation
-	 * @param double elevation
+	 * @param elevation
 	 */
 	@Override
 	public void setElevation(double elevation) {
@@ -45,6 +47,7 @@ public abstract class Area implements IArea {
 
 	/**
 	 * allows classes to use the radiation
+	 * @return radiation
 	 */
 	@Override
 	public double getRadiation() {
@@ -54,7 +57,7 @@ public abstract class Area implements IArea {
 
 	/**
 	 * gives radiation a value
-	 * @param double radiation
+	 * @param radiation
 	 */
 	@Override
 	public void setRadiation(double radiation) {
@@ -64,6 +67,7 @@ public abstract class Area implements IArea {
 
 	/**
 	 * finds the value of consumed energy
+	 * return getBasicEnergyCost()*2
 	 */
 	@Override
 	public double calcConsumedEnergy() {
