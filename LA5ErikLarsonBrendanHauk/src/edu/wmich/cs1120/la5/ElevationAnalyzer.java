@@ -8,6 +8,7 @@ public class ElevationAnalyzer implements IRover {
 	private String analysis;
 	/**
 	 * This method is so other classes can get the the value of path
+	 * @return path
 	 */
 	@Override
 	public ArrayList<IArea> getPath() {
@@ -17,7 +18,7 @@ public class ElevationAnalyzer implements IRover {
 	
 	/**
 	 * This is the method that sets the variable path
-	 * @param Arraylist<IArea> Path
+	 * @param path
 	 */
 	@Override
 	public void setPath(ArrayList<IArea> path) {
@@ -44,6 +45,7 @@ public class ElevationAnalyzer implements IRover {
 	}
 	/**
 	 * This method is so other classes can be able to call and use the variable analysis 
+	 * @return analysis
 	 */
 	@Override
 	public String getAnalysis() {
@@ -53,6 +55,7 @@ public class ElevationAnalyzer implements IRover {
 
 	/**
 	 * This is the method that sets the variable analysis
+	 * @param analysis
 	 */
 	@Override
 	public void setAnalysis(String analysis) {
